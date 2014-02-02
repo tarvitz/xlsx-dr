@@ -11,7 +11,14 @@ installed:
 
    user@localhost$ virtualenv --no-site-packagmes venv
    user@localhost$ source ve/bin/activate
-   user@localhost$ pip install -r requirements/base.html
+   user@localhost$ pip install -r requirements/base.txt
+
+*optional*
+
+.. code-block:: bash
+
+   user@localhost$ pip install -r requirements/docs.txt
+
 
 Dependencies
 ------------

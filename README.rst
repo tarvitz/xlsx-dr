@@ -10,7 +10,7 @@ installed:
 .. code-block:: bash
 
    user@localhost$ virtualenv --no-site-packages venv
-   user@localhost$ source ve/bin/activate
+   user@localhost$ source venv/bin/activate
    user@localhost$ pip install -r requirements/base.txt
 
 *optional*

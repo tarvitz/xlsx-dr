@@ -42,7 +42,7 @@ Or you could run tests via `python -m unittest module` or via `run_tests.sh` scr
 
    user@localhost$ ./run_tests.sh tests.XlsxReader
 
-Using `tox<https://pypi.python.org/pypi/tox>`_ you can achieve fast and simple
+Using `tox <https://pypi.python.org/pypi/tox>`_ you can achieve fast and simple
 test runs.
 
 .. code-block:: bash

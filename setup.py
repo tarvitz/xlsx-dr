@@ -26,7 +26,7 @@ CLASSIFIERS = [
 
 install_requires = [
     'six',
-    'openpyxl',
+    'openpyxl==1.8.2',
     'XlsxWriter',
     'PyTMX',
     'lxml'

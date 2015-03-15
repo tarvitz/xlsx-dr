@@ -22,19 +22,32 @@ installed:
 
 Dependencies
 ------------
-* lxml-3.3.0
+* lxml-3.3.0+
 * openpyxl-1.8.2 +
 * sphinx (for docs)
 
 
 Tests
 ~~~~~
-You could run tests via `python -m unittest module` or via `run_tests.sh` script
+Simply run
+
+.. code-block:: bash
+
+    user@localhost$ python setup.py test
+
+
+Or you could run tests via `python -m unittest module` or via `run_tests.sh` script
 
 .. code-block:: bash
 
    user@localhost$ ./run_tests.sh tests.XlsxReader
 
+Using `tox<https://pypi.python.org/pypi/tox>`_ you can achieve fast and simple
+test runs.
+
+.. code-block:: bash
+
+    user@localhost$ tox
 
 Usage
 ~~~~~
@@ -43,7 +56,7 @@ dictionary format or json (simplejson required)
 
 .. code-block:: python
 
-    from xlsx import XlsxReader
+    from xlsx.reader import XlsxReader
     reader = XlsxReader('file.xlsx')
     data = reader.get_data(sheet_name='Sheet1')
     img_data = reader.get_images()

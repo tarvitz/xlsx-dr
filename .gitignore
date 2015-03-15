@@ -1,2 +1,8 @@
 *.py[co]
 .idea
+.tox
+.coverage
+*.egg-info
+simple.xlsx_tmp
+ve
+data

@@ -11,10 +11,15 @@
 import re
 import os
 from openpyxl import load_workbook
-import simplejson as json
+try:
+    import simplejson as json
+except ImportError:
+    import json
 from helpers import encoder
 from lxml import etree
 from zipfile import ZipFile
+
+__all__ = ['XlsxReader']
 
 
 class XlsxReader(object):
@@ -33,6 +38,7 @@ class XlsxReader(object):
     def get_images(self):
         """ extracts information about used images in xlsx file
 
+        :rtype: dict
         :return: images data list of dicts with:
 
         .. code-block:: python
@@ -129,7 +135,7 @@ class XlsxReader(object):
         :param fmt: output format, python dict by default,
             could be: json
         :param sheet_range: range getter cells, for example A1:C5
-
+        :rtype: dict
         :return: data map
         """
 

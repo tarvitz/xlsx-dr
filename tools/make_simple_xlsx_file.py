@@ -7,7 +7,7 @@ import xlsxwriter
 from datetime import datetime
 
 FILENAME = 'simple.xlsx'
-DEBUG = True
+DEBUG = False
 
 DATA = [
     ('Person', 'Mary'),
@@ -24,7 +24,8 @@ if DEBUG:
 workbook = xlsxwriter.Workbook(FILENAME)
 bold = workbook.add_format({'bold': 1})
 date_format = workbook.add_format({'num_format': 'dd-mm-yyyy'})
-money_format = workbook.add_format({'num_format': '$#,##0'}) 
+money_format = workbook.add_format({'num_format': '$#,##0'})
+
 
 def main():
     # preparations
@@ -53,9 +54,7 @@ def main():
             worksheet.write(row, col + 1, value, money_format)
         elif re.match(r'\w\d+', key):
             # worksheet.insert_image(row, col + 1, 'photo.jpg')
-            getattr(worksheet, value[0])(key, value[1],
-                    #{'x_scale': 0.5, 'y_scale': 0.5}
-            )
+            getattr(worksheet, value[0])(key, value[1])
         else:
             worksheet.write(row, col + 1, value)
         row += 1

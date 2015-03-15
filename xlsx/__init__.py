@@ -1,2 +1,4 @@
 # coding: utf-8
-from .xlsx import *
+VERSION = (0, 0, 1, "alpha")
+
+__all__ = ["VERSION", ]

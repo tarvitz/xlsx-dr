@@ -1,0 +1,14 @@
+[run]
+branch = True
+
+[report]
+exclude_lines =
+  pragma: no cover
+  def __repr__
+  self.fail\(
+  raise AssertionError
+  raise NotImplementedError
+  if __name__ == .__main__.:
+
+[html]
+directory = data/coverage_html_report

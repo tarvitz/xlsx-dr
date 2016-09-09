@@ -1,5 +1,8 @@
 XLSX dirty reader
 =================
+
+**!!!NOTE!!!*** That's dirty reader, hope you don't even try to use it. Please check other repositories and tools to get acquainted how to extract pictures from cells.
+
 .. contents:: :local:
 
 Installation
